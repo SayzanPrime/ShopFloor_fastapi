@@ -18,3 +18,12 @@ finally :
 
 - cd app
 - uvicorn main:app --reload
+
+
+if the project wont start please unistall the env and install your own using :
+
+- python -m venv venv
+
+And repeat from step one.
+
+
