@@ -14,10 +14,9 @@ To install dependencies :
 - pip install -r requirements.txt
 
 
-finally :
+run the project:
 
-- cd app
-- uvicorn main:app --reload
+- uvicorn app.main:app --reload
 
 
 if the project wont start please unistall the env and install your own using :
