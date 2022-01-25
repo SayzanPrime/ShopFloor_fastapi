@@ -72,16 +72,11 @@ async def chartWs(websocket: WebSocket):
     await websocket.accept()
     await websocket.receive_text()
 
-    temp_list = []
-    for i in range(8):
-        var = randint(10,50)
-        temp_list.append(var)
-        
+    random_list = [randint(10,50) for i in range(8)]
     while True:
         try:
-            temp_list = temp_list[1:]
-            temp_list.append(randint(10,50))
-            await websocket.send_json(temp_list)
+            random_list.append(randint(10,50))
+            await websocket.send_json(random_list[1:])
         except Exception as e:
             print('error:', e)
             break
